@@ -6,13 +6,16 @@ authors = ["Kolodkin.SS"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.11"
+python = "^3.12"
 
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.3.2"
 black = "^24.4.2"
 isort = "^5.13.2"
+pre-commit = "^3.8.0"
+pytest-cov = "^5.0.0"
+
 
 [build-system]
 requires = ["poetry-core"]
@@ -34,11 +37,13 @@ addopts = [
     "--cov-report=html",
 ]
 testpaths = ["src/tests"]
+pythonpath = ["src/"]
 
 [tool.coverage.run]
 branch = true
 source = ["src"]
 omit = [
+    "src/tests/*",
     "__init__.py",
 ]
 
