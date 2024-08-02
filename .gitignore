@@ -1,0 +1,26 @@
+# IDE
+.idea
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Loging
+logs/
+*.log
+
+# Environments
+.env
+env/
+venv/
+.venv/
+
+# Coverage
+htmlcov/
+coverage.xml
+test_results.xml
+.coverage
+
+# pytest
+.pytest_cache/

@@ -1,0 +1,48 @@
+[tool.poetry]
+name = "algorithms-and-data-structures"
+version = "0.1.0"
+description = ""
+authors = ["Kolodkin.SS"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.2"
+black = "^24.4.2"
+isort = "^5.13.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.black]
+line_length = 100
+
+[tool.isort]
+profile = "black"
+line_length = 100
+
+
+[tool.pytest.ini_options]
+addopts = [
+    "-v",
+    "--cov=src",
+    "--cov-report=html",
+]
+testpaths = ["src/tests"]
+
+[tool.coverage.run]
+branch = true
+source = ["src"]
+omit = [
+    "__init__.py",
+]
+
+[tool.coverage.report]
+exclude_also = [
+    "raise NotImplementedError",
+]
