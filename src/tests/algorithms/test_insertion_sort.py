@@ -1,4 +1,4 @@
-from algorithms.insertion_sort import insert_element_to_array, insertion_sort
+from algorithms.sorting_algorithms.insertion_sort import insert_element_to_array, insertion_sort
 
 
 def test_insert_element_to_array():
