@@ -38,6 +38,5 @@ def merge_sort(array):
         return array
     else:
         left = merge_sort(array[: math.floor(len(array) / 2)])
-        right = []
-        # right = merge_sort(array[math.floor(len(array) / 2) :])
+        right = merge_sort(array[math.floor(len(array) / 2):])
         return merging(left, right)
