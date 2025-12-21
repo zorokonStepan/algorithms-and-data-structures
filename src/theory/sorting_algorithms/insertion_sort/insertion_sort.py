@@ -3,9 +3,9 @@ from typing import Sequence
 from theory.sorting_algorithms.data import after_sorting_numbers, before_sorting_numbers
 
 
-def insertion_sort_in_place(seq: Sequence) -> Sequence:
+def insertion_sort_in_place(seq: Sequence) -> None:
     if len(seq) < 2:
-        return seq
+        return None
 
     index = 1
 
@@ -22,8 +22,9 @@ def insertion_sort_in_place(seq: Sequence) -> Sequence:
 
         index += 1
 
-    return seq
+    return None
 
 
 if __name__ == "__main__":
-    assert insertion_sort_in_place(before_sorting_numbers) == after_sorting_numbers
+    insertion_sort_in_place(before_sorting_numbers)
+    assert before_sorting_numbers == after_sorting_numbers
